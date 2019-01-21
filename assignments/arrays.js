@@ -81,8 +81,19 @@ console.log(`Car 33 is a ${car.car_year} ${car.car_make} ${car.car_model}` );
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
-let lastCar = 0;
-console.log();
+function challenge2(arr){
+    let res = 0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i].car_year >= arr[res].car_year) res = i; // using ">=" operator because the last car in the inventory is the youngest one, that has been added to the inventory as the last one among the youngest
+    }
+
+    return arr[res];
+}
+
+let lastCar = challenge2(inventory);
+
+
+console.log(lastCar.car_make, lastCar.car_model);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
