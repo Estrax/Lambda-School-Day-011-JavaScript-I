@@ -90,6 +90,7 @@ function challenge2(arr){
     return arr[res];
 }
 
+// let lastCar = inventory.sort((a, b) => b.car_year-a.car_year)[0];
 let lastCar = challenge2(inventory);
 
 
