@@ -1,7 +1,7 @@
 // Let's get some practice writing a few objects for a new group of interns at a small business.
 
 // ==== Challenge 1: Writing Objects ==== 
-// HR needs some information on the new interns put into a database.  Given an id, email, first name, and gender. Create an object for each person in the company list:
+// HR needs some information on the new interns put into a database.	Given an id, email, first name, and gender. Create an object for each person in the company list:
 
 // 1,mmelloy0@psu.edu,Mitzi,F
 // 2,kdiben1@tinypic.com,Kennan,M
@@ -11,46 +11,46 @@
 
 // Example format of an intern object: 1,examples@you.edu,Example,F
 const example = {
-  "id": 0,
-  "name": "Example",
-  "email": "examples@you.edu",
-  "gender": "F"
+	"id": 0,
+	"name": "Example",
+	"email": "examples@you.edu",
+	"gender": "F"
 }
 
 // Write your intern objects here:
-const mitzi  = {
-  "id": 1,
-  "name": "Mitzi",
-  "email": "mmelloy0@psu.edu",
-  "gender": "F"
+const mitzi	= {
+	"id": 1,
+	"name": "Mitzi",
+	"email": "mmelloy0@psu.edu",
+	"gender": "F"
 }
 
-const kennan  = {
-  "id": 2,
-  "name": "Kennan",
-  "email": "kdiben1@tinypic.com",
-  "gender": "M"
+const kennan	= {
+	"id": 2,
+	"name": "Kennan",
+	"email": "kdiben1@tinypic.com",
+	"gender": "M"
 }
 
-const keven  = {
-  "id": 3,
-  "name": "Keven",
-  "email": "kmummery2@wikimedia.org",
-  "gender": "M"
+const keven	= {
+	"id": 3,
+	"name": "Keven",
+	"email": "kmummery2@wikimedia.org",
+	"gender": "M"
 }
 
-const gannie  = {
-  "id": 4,
-  "name": "Gannie",
-  "email": "gmartinson3@illinois.edu",
-  "gender": "M"
+const gannie	= {
+	"id": 4,
+	"name": "Gannie",
+	"email": "gmartinson3@illinois.edu",
+	"gender": "M"
 }
 
-const antonietta  = {
-  "id": 5,
-  "name": "Antonietta",
-  "email": "adaine5@samsung.com",
-  "gender": "F"
+const antonietta	= {
+	"id": 5,
+	"name": "Antonietta",
+	"email": "adaine5@samsung.com",
+	"gender": "F"
 }
 
 // ==== Challenge 2: Reading Object Data ==== 
@@ -73,7 +73,7 @@ console.log(antonietta.gender);
 
 // es5
 // kennan.speak = function() {
-//   return "Hello, my name is kennan!";
+//	 return "Hello, my name is kennan!";
 // }
 
 // es6
@@ -92,31 +92,31 @@ console.log(antonietta.multiplyNums(3, 4));
 
 // ==== Stretch Challenge: Nested Objects and the this keyword ==== 
 
-// 1. Create a parent object with properties for name and age.  Make the name Susan and the age 70.
-// 2. Nest a child object in the parent object with name and age as well.  The name will be George and the age will be 50.
-// 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
+// 1. Create a parent object with properties for name and age.	Make the name Susan and the age 70.
+// 2. Nest a child object in the parent object with name and age as well.	The name will be George and the age will be 50.
+// 3. Nest a grandchild object in the child object with properties for name and age.	The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
 const parent = {
-  "name": "Susan",
-  "age": 70,
-  "speak": function(){
-    return `Hello! I am ${this.name} and I am ${this.age} years old`;
-  },
-  "child": {
-    "name": "George",
-    "age": 50,
-    "speak": function(){
-      return `Hello! I am ${this.name} and I am ${this.age} years old`;
-    },
-    "grandchild": {
-      "name": "Sam",
-      "age": 30,
-      "speak": function(){
-        return `Hello! I am ${this.name} and I am ${this.age} years old`;
-      },
-    }
-  }
+	"name": "Susan",
+	"age": 70,
+	"speak": function(){
+		return `Hello! I am ${this.name} and I am ${this.age} years old`;
+	},
+	"child": {
+		"name": "George",
+		"age": 50,
+		"speak": function(){
+			return `Hello! I am ${this.name} and I am ${this.age} years old`;
+		},
+		"grandchild": {
+			"name": "Sam",
+			"age": 30,
+			"speak": function(){
+				return `Hello! I am ${this.name} and I am ${this.age} years old`;
+			},
+		}
+	}
 }
 
 // Log the parent object's name
@@ -140,19 +140,19 @@ console.log(parent.child.grandchild.speak());
 // or the class-based version:
 
 // class Person {
-//   constructor(name, age){
-//     this.name = name;
-//     this.age = age;
-//     this.children = [];
-//   }
+//	 constructor(name, age){
+//		 this.name = name;
+//		 this.age = age;
+//		 this.children = [];
+//	 }
 
-//   addChild(person){
-//     this.children.push(person);
-//   }
+//	 addChild(person){
+//		 this.children.push(person);
+//	 }
 
-//   speak(){
-//     return `Hello! I am ${this.name} and I am ${this.age} years old.`;
-//   }
+//	 speak(){
+//		 return `Hello! I am ${this.name} and I am ${this.age} years old.`;
+//	 }
 // }
 
 // const parent2 = new Person("Susan", 70);
