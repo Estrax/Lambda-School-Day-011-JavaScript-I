@@ -81,12 +81,7 @@ console.log(`Car 33 is a ${car.car_year} ${car.car_make} ${car.car_model}` );
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
 function challenge2(arr){
-	let res = 0;
-	for(let i=0; i<arr.length; i++){
-		if(arr[i].car_year >= arr[res].car_year) res = i; // using ">=" operator because the last car in the inventory is the youngest one, that has been added to the inventory as the last one among the youngest
-	}
-
-	return arr[res];
+	return arr[arr.length-1];
 }
 
 // let lastCar = inventory.sort((a, b) => b.car_year-a.car_year)[0];
