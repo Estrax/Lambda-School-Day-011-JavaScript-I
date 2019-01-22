@@ -76,7 +76,7 @@ let car = challenge1(inventory);
 // or with array methods
 // let car = inventory.filter((elem) => elem.id==33)[0];
 
-console.log(`Car 33 is a ${car.car_year} ${car.car_make} ${car.car_model}` );
+// console.log(`Car 33 is a ${car.car_year} ${car.car_make} ${car.car_model}` );
 
 
 // ==== Challenge 2 ====
@@ -94,7 +94,7 @@ function challenge2(arr){
 let lastCar = challenge2(inventory);
 
 
-console.log(lastCar.car_make, lastCar.car_model);
+// console.log(lastCar.car_make, lastCar.car_model);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
@@ -103,12 +103,23 @@ console.log(lastCar.car_make, lastCar.car_model);
 // let carModels = inventory.sort((a, b) => (a.car_model > b.car_model)? 1 : (b.car_model > a.car_model) ? -1 : 0);
 let carModels = inventory.sort((a, b) => a.car_model > b.car_model);
 // let carModels = [];
-console.log(carModels);
+// console.log(carModels);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = [];
-console.log();
+
+function challenge4(arr){
+    let res = [];
+    for(let i=0; i<arr.length; i++) res.push(arr[i].car_year);
+    return res;
+}
+
+// let carYears = challenge4(inventory);
+
+// es6
+let carYears = inventory.map(elem => elem.car_year);
+// let carYears = [];
+console.log(carYears);
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
