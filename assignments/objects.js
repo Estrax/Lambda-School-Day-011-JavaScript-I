@@ -97,16 +97,69 @@ console.log(antonietta.multiplyNums(3, 4));
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {}
+const parent = {
+  "name": "Susan",
+  "age": 70,
+  "speak": function(){
+    return `Hello! I am ${this.name} and I am ${this.age} years old`;
+  },
+  "child": {
+    "name": "George",
+    "age": 50,
+    "speak": function(){
+      return `Hello! I am ${this.name} and I am ${this.age} years old`;
+    },
+    "grandchild": {
+      "name": "Sam",
+      "age": 30,
+      "speak": function(){
+        return `Hello! I am ${this.name} and I am ${this.age} years old`;
+      },
+    }
+  }
+}
 
 // Log the parent object's name
+console.log(parent.name);
 
 // Log the child's age
+console.log(parent.child.age);
 
 // Log the name and age of the grandchild
+console.log(parent.child.grandchild.age);
 
 // Have the parent speak
+console.log(parent.speak());
 
 // Have the child speak
+console.log(parent.child.speak());
 
 // Have the grandchild speak
+console.log(parent.child.grandchild.speak());
+
+// or the class-based version:
+
+// class Person {
+//   constructor(name, age){
+//     this.name = name;
+//     this.age = age;
+//     this.children = [];
+//   }
+
+//   addChild(person){
+//     this.children.push(person);
+//   }
+
+//   speak(){
+//     return `Hello! I am ${this.name} and I am ${this.age} years old.`;
+//   }
+// }
+
+// const parent2 = new Person("Susan", 70);
+// const child2 = new Person("George", 50);
+// const grandchild2 = new Person("Sam", 30);
+// parent2.addChild(child2);
+// child2.addChild(grandchild2);
+// console.log(parent2.speak());
+// console.log(child2.speak());
+// console.log(grandchild2.speak());
