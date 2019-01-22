@@ -92,8 +92,7 @@ console.log(lastCar.car_make, lastCar.car_model);
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 
 // typical sort:
-// let carModels = inventory.sort((a, b) => (a.car_model > b.car_model)? 1 : (b.car_model > a.car_model) ? -1 : 0);
-let carModels = inventory.sort((a, b) => a.car_model > b.car_model);
+let carModels = inventory.sort((a, b) => (a.car_model.toLowerCase() > b.car_model.toLowerCase())? 1 : (b.car_model.toLowerCase() > a.car_model.toLowerCase()) ? -1 : 0);
 
 console.log(carModels);
 
