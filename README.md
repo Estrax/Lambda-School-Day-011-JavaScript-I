@@ -5,7 +5,7 @@
 ## Assignment Description
 
 * [x] Fork/Clone this repository.
-* [ ] Complete all the exercises as described inside each assignment file.
+* [x] Complete all the exercises as described inside each assignment file.
 * [x] Use `console.log()` statements to check to see if your code does what it is supposed to do.
 * [x] To test your `console.log()` statements open up the index.html file found in the assignments folder and use the developer tools to view the console.  
 

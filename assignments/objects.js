@@ -25,7 +25,7 @@ const mitzi	= {
 	"gender": "F"
 }
 
-const kennan	= {
+const kennan = {
 	"id": 2,
 	"name": "Kennan",
 	"email": "kdiben1@tinypic.com",
@@ -39,14 +39,14 @@ const keven	= {
 	"gender": "M"
 }
 
-const gannie	= {
+const gannie = {
 	"id": 4,
 	"name": "Gannie",
 	"email": "gmartinson3@illinois.edu",
 	"gender": "M"
 }
 
-const antonietta	= {
+const antonietta = {
 	"id": 5,
 	"name": "Antonietta",
 	"email": "adaine5@samsung.com",
